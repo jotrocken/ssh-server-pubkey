@@ -85,7 +85,8 @@ I establish a SSH reverse tunnel to a VPS (docker host), there is this container
 
 **How to do that?**
 
-- create new container of this image with one more published port: `-p 4401:4401`
+- create new container of this image with minumum one more published port: `-p 4401:4401` or 
+- `docker-compose -f docker-compose-reversetunnel.yml -d`
 - create a keypair (see above)
 - find out to which port you need to make a connection on that stuff
 - find out the LAN IP of that device and make the IP static in the router settings
