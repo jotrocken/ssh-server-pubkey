@@ -28,7 +28,7 @@ cd ssh-server-pubkey
 If you already have a RSA keypair, please add it `cat <publickeyfile> keys/authorized_keys` and skip to the next step.
 
 Generate a keypair (public/private) and copy the public key into the right directory (later on this will be a mounted volume).\
-If you want an automatically established SSH connection, **don't assign a password** for the keyfile!
+If you want an automatically establishing SSH connection, **don't assign a password** for the keyfile!
 
 ```
 ssh-keygen -f sshkey -t rsa -b 4096
