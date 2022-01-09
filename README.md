@@ -73,15 +73,15 @@ The second, third, fourth... key can be added by `cat <pubkey-filename> >> keys/
 
 #### SSH reverse tunnel endpoint
 
-I use the following systems at home that provide a HTTP-, SSH- or other login possibility:
+I use the following systems at home that provide a HTTP-, SSH- or other login/admin possibility:
 
 - Raspberry Pi
 - surveillance camera
 - heating control
 - smart home tools like plugs to control over internet
 
-Unfortunately my internet connection has no reachable public IP (because of `CGNAT`), also DynDNS doesn't work because of this. Usually this stuff is connectable to if you're at our home LAN, but not from outside.\
-I establish a SSH reverse tunnel to a VPS (docker host), there is this container running.
+Unfortunately my internet connection has no accessible public IP (because of `CGNAT`), also DynDNS doesn't work because of this. Usually this stuff is connectable to if you're inside our home LAN, but not from outside when I'm not at home.\
+So I establish a SSH reverse tunnel to a VPS (docker host), there is this container running.
 
 **How to do that?**
 
