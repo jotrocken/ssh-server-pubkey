@@ -19,8 +19,8 @@ It has the following features and thereby differences to other SSH server images
 First create a working directory and it's subdirectory for the public keys on the host:
 
 ```
-mkdir -p ssh-server/keys
-cd ssh-server
+git clone https://github.com/jotrocken/ssh-server-pubkey.git
+cd ssh-server-pubkey
 ```
 
 #### Create keypair
@@ -33,7 +33,7 @@ If you want an automatically established SSH connection, **don't assign a passwo
 ```
 ssh-keygen -f sshkey -t rsa -b 4096
 chmod 600 sshkey
-cp sshkey.pub keys/authorized_keys
+cat sshkey.pub >> keys/authorized_keys
 ```
 
 #### Run container
@@ -46,6 +46,10 @@ docker run -d \
        --restart unless-stopped \
        jotrocken/ssh-server-pubkey
 ````
+
+#### Compose Container instead
+
+`docker-compose up -d`
 
 #### Connect!
 
@@ -101,7 +105,6 @@ I recommend to use `autossh` instead of ssh.
 
 Coming soon...:
 
-- docker-compose file
 - adding fail2ban
 - make image size smaller (Alpine?)
 - shell script for preparing installation
