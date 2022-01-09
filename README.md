@@ -47,7 +47,7 @@ docker run -d \
        jotrocken/ssh-server-pubkey
 ````
 
-#### Compose Container instead
+#### Compose container instead
 
 `docker-compose up -d`
 
