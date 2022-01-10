@@ -41,7 +41,7 @@ cat sshkey.pub >> keys/authorized_keys
 ```
 docker run -d \
        -p 4422:22 \
-       -v ./keys/:/home/tunnel/.ssh/ \
+       -v $PWD/keys/:/home/tunnel/.ssh/ \
        --name ssh-server \
        --restart unless-stopped \
        jotrocken/ssh-server-pubkey
