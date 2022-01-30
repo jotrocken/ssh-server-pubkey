@@ -11,5 +11,5 @@ services:
        - 4402:4402
        - 4403:4403
     volumes:
-      - ./keys:/home/tunnel/.ssh/
+      - $/keys:/home/tunnel/.ssh/
 
