@@ -8,6 +8,6 @@ services:
     ports:
        - 4422:22
     volumes:
-      - ./keys:/home/tunnel/.ssh/
+      - $PWD/keys:/home/tunnel/.ssh/
 
 
